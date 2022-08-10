@@ -1,0 +1,41 @@
+/* Categories */
+
+html{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+div.layer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.6);
+}
+
+div.header.page-categories{
+    height: 250px;
+    width: 100%;
+    position: relative;
+    background: url('../img/bg_blured.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.categories > div.row{
+    height: 200px;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    border: 2px solid black;
+}
