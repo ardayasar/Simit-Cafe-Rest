@@ -40,7 +40,7 @@ div.categorie > div.layer:hover{
 }
 
 div.header.page-categories{
-    height: 250px;
+    height: 300px;
     width: 100%;
     position: relative;
     background: url('../img/bg_blured.jpeg');
@@ -82,4 +82,20 @@ div.categories > div.row > a > div.categorie > div.layer:hover{
 div.categories > div.row > a > div.categorie > div.layer > h2{
     background-color: black;
     padding: 5px 10px;
+}
+
+div.footer{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.footer > p{
+    margin: auto;
 }
