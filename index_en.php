@@ -18,8 +18,8 @@
         </a>
     
         <a href="#" class="survey">
-            <button type="button" onclick="window.location = 'https:\/\/google.com'">
-                <h3>Bizi değerlendirmek ister misiniz?</h3>
+            <button type="button" onclick="window.location = '/survey.php'">
+                <h3>Would you like to rate us?</h3>
             </button>
         </a>
 
