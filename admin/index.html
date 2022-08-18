@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Simit Cafe & Restaurant</title>
+</head>
+<body>
+
+    <div class="panel">
+        <div class="add">
+            <form action="addcat.php" method="post">
+                <input type="text" name="cat_tr" placeholder="Kategori Adı [TR]">
+                <input type="text" name="cat_en" placeholder="Kategori Adı [EN]">
+                <input type="file" name="background" placeholder="Arkaplan Resmi">
+            </form>
+        </div>
+        <div class="list">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Kategori [TR]</th>
+                    <th>Kategori [EN]</th>
+                    <th>Arkaplan</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td contenteditable='true' id="cen">sdfsdf</td>
+                    <td contenteditable='true' id="ctr">sdfsdf</td>
+                    <td contenteditable='true' id="bg">sdfsdf</td>
+                    <td><a href="#" id="del">X</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td contenteditable='true' id="cen">sdfsdf</td>
+                    <td contenteditable='true' id="ctr">sdfsdf</td>
+                    <td contenteditable='true' id="bg">sdfsdf</td>
+                    <td><a href="#" id="del">X</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td contenteditable='true' id="cen">sdfsdf</td>
+                    <td contenteditable='true' id="ctr">sdfsdf</td>
+                    <td contenteditable='true' id="bg">sdfsdf</td>
+                    <td><a href="#" id="del">X</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+
+
+    $(document).on("input", "#cen",function(event) {
+        var id = $(this).parent().children(':first-child').text();
+        var editedText = $(this).text();
+        $.ajax({
+            type : "POST",
+            url  : "u_cat_cen.php",
+            contentType: "application/json",
+            data : {"id": id, "text": editedText},// passing the values
+            success: function(res){  
+                      console.log(res);
+                    }
+        });
+    });
+
+    $(document).on("input", "#ctr",function(event) {
+        var id = $(this).parent().children(':first-child').text();
+        var editedText = $(this).text();
+        $.ajax({
+            type : "POST",
+            url  : "u_cat_ctr.php",
+            contentType: "application/json",
+            data : {"id": id, "text": editedText},// passing the values
+            success: function(res){  
+                      console.log(res);
+                    }
+        });
+    });
+</script>
+
+
+</html>

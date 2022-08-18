@@ -49,7 +49,7 @@ try{
         $rr++;
         if($rr % 2 == 0){
             echo '<a href="/menu.php?c=' . $category . '">
-                    <div class="categorie" style="background-image: url(\'' . $bg . '\')">
+                    <div class="categorie" style="background-image: url(\'assets/img/' . $bg . '\')">
                         <div class="layer">
                             <h2>' . $he . '</h2>
                         </div>
@@ -60,7 +60,7 @@ try{
         else{
             echo '<div class="row">';
             echo '<a href="/menu.php?c=' . $category . '">
-                    <div class="categorie" style="background-image: url(\'' . $bg . '\')">
+                    <div class="categorie" style="background-image: url(\'assets/img/' . $bg . '\')">
                         <div class="layer">
                             <h2>' . $he . '</h2>
                         </div>

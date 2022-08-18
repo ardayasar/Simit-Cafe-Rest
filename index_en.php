@@ -13,11 +13,11 @@
         
         <img src="./assets/img/logo.png" class="logo">
 
-        <a href="#" class="menu">
+        <a href="categories.php" class="menu">
             <button type="button">MENU</button> 
         </a>
     
-        <a href="#" class="survey">
+        <a href="survey.php" class="survey">
             <button type="button" onclick="window.location = '/survey.php'">
                 <h3>Would you like to rate us?</h3>
             </button>
