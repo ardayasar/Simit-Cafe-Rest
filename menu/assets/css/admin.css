@@ -1,0 +1,106 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+html{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+div.panel{
+    width: calc(100% / 3);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+}
+
+div.panel > div.add, div.list{
+  height: 50%;
+  width: 100%;
+  overflow: scroll;
+}
+
+div.panel > div.add{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.panel > div.add > form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form > input[type="text"]{
+  width: 200px;
+  height: 35px;
+  font-size: 14px;
+  margin: 5px;
+  padding: 5px 10px;
+  border: 2px solid black;
+}
+
+form > input[type="file"]{
+  width: 220px;
+  border: 2px solid black;
+  padding: 5px 0px;
+}
+
+
+form > textarea{
+  width: 220px;
+  border: 2px solid black;
+  padding: 5px 0px;
+}
+
+form > input[type="submit"]{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  width: 225px;
+  height: 35px;
+  font-size: 14px;
+  margin: 5px;
+  padding: 5px 10px;
+  border: 0px;
+}
+
+@media only screen and (max-width: 900px){
+  body{
+    flex-direction: column;
+  }
+
+  div.panel{
+    width: 100%;
+  }
+
+  div.panel > div.add{
+    height: auto;
+  }
+  
+}

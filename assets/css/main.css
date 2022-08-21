@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 *{
     font-family: 'DM Sans', sans-serif;
 }
 
 html{
-    padding: 0;
     margin: 0;
+    padding: 0;
     height: 100%;
 }
 
@@ -14,88 +14,243 @@ body{
     margin: 0;
     padding: 0;
     height: 100%;
-    background: url("../img/bg_blured.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-/* index.html */
+/* Buttons */
 
-div.placeholder{
-    width: 80%;
-    max-width: 500px;
-    min-width: 250px;
-    height: 80%;
-    max-height: 500px;
-    min-height: 200px;
-    background-color: rgba(255,255,255,0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 4px;
-    position: relative;
+button{
+    cursor: pointer;
 }
 
-img.logo{
-    height: 220px;
-    width: auto;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-a.menu > button{
-    width: 200px;
-    height: 45px;
-    font-size: 20px;
-    border: 2px solid #1972fa;
-    border-radius: 0px;
+button.classic{
+    border: 0;
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 10px 15px;
+    margin: 5px;
     background-color: transparent;
-    color: #1972ff;
-    box-shadow: 0px 0px 10px 0.1px rgba(0, 0, 0, 0.166);
-    transition: background-color 0.2s, color 0.3s;
-    cursor: pointer;
 }
 
-a.menu > button:hover{
-    background-color: #1972fa;
+button.bg_red{
+    border: 2px solid rgb(245, 87, 95);
+    background-color: rgb(245, 87, 95);
     color: white;
-    box-shadow: 0px 0px 10px 0.1px rgba(0, 0, 0, 0.366);
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    box-shadow: 0px 0px 10px 0.1px rgba(0, 0, 0, 0.4);
 }
 
-/*   --------------   */
-
-a.survey{
-    position: absolute;
-    bottom: 20px;
-    margin: auto;
-    width: 70%;
-    max-width: 400px;
-    text-align: center;
-    cursor: pointer;
+button.border_y{
+    border: 2px solid rgb(211, 200, 104);
+    color: rgb(211, 200, 104);
+    padding: 10px 42px;
+    box-shadow: 0px 0px 10px 0.1px rgba(0, 0, 0, 0.4);
 }
 
-a.survey > button{
-    padding: 5px 15px;
+/* Ready Div's */
+
+div.vertical{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Menu Bar */
+
+div.menu{
+    height: 70px;
     width: 100%;
-    border: 0px;
-    border-radius: 30px;
     background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+div.menu > img[class="logo"]{
+    height: 100%;
+}
+
+div.menu > div[class="group"]{
+    height: 100%;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+div.menu > div[class="group"] > a{
+    margin: 4px;
+}
+
+div.menu > div[class="group"] > a > button{
+    border: 0;
+    border-bottom: 1px solid transparent;
+    background: transparent;
+    font-size: 14px;
+    transition: border-color 0.2s, color 0.2s;
     cursor: pointer;
 }
 
-a.survey > button > h3{
-    font-size: 16px;
-    background: -webkit-linear-gradient(right, #2283C9, #00AFDF, #00D7DA, #77FAC6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor: pointer;
+div.menu > div[class="group"] > a:hover > button{
+    border-bottom: 1px solid rgb(246, 31, 41);
+    color: rgb(246, 31, 41);
 }
 
+/* Header */
+
+div.header{
+    height: 500px;
+    width: 100%;
+    background-color: rgb(29, 28, 28);
+    display: flex;
+    flex-direction: row;
+}
+
+div.header > div[class="information_panel"], div[class="image_panel"]{
+    width: 50%;
+    height: 100%;
+}
+
+div.header > div[class="information_panel"]{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.header > div[class="information_panel"] > *{
+    width: 80%;
+    margin: 0 auto;
+}
+
+div.header > div[class="information_panel"] > h1{
+    color: white;
+}
+
+
+div.header > div[class="information_panel"] > h4{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: normal;
+    font-size: 14px;
+    color: rgb(206, 206, 206);
+}
+
+div.header > div[class="image_panel"]{
+   background: linear-gradient(to left, transparent, rgb(29, 28, 28)), url('/assets/img/fajita.png');
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+
+/* Foods */
+
+div.ours{
+    height: auto;
+    width: 100%;
+}
+
+div.ours > h1{
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+}
+
+div.ours > div[class="foods"]{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div.ours > div[class="foods"] > div[class="food"]{
+    height: 350px;
+    width: 240px;
+    margin: 10px;
+    color: rgb(229, 229, 229);
+    text-align: center;
+    box-shadow: 0px 0px 8px 0.2px rgba(0, 0, 0, 0.547);
+}
+
+div.ours > div[class="foods"] > div[class="food"]:nth-child(1){
+    background-color: #AF5D00;
+}
+
+div.ours > div[class="foods"] > div[class="food"] > div.image_place:nth-child(1){
+    height: 40%;
+    background: linear-gradient(to bottom, transparent, #AF5D00), url('../img/ygtv.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.ours > div[class="foods"] > div[class="food"]:nth-child(2){
+    background-color: #C34A36;
+}
+
+div.ours > div[class="foods"] > div[class="food"]:nth-child(2) > div.image_place{
+    height: 40%;
+    background: linear-gradient(to bottom, transparent, #C34A36), url('../img/pizza.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.ours > div[class="foods"] > div[class="food"]:nth-child(3){
+    background-color: #845EC2;
+}
+
+div.ours > div[class="foods"] > div[class="food"]:nth-child(3) > div.image_place{
+    height: 40%;
+    background: linear-gradient(to bottom, transparent, #845EC2), url('../img/narg2.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Mobile Size */
+
+@media only screen and (max-width: 600px){
+
+    /* Menu */
+    div.menu > div[class="group"]{
+        display: none;
+    }
+
+    div.menu > a.yemeksepeti{
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    /* Header */
+    div.header{
+        height: 600px;
+        width: 100%;
+        background-color: rgb(29, 28, 28);
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    div.header > div[class="information_panel"], div[class="image_panel"]{
+        width: 100%;
+        height: 50%;
+    }
+
+    div.header > div[class="image_panel"]{
+        background: linear-gradient(to bottom, transparent, rgb(29, 28, 28)), url('/assets/img/fajita.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+     }
+
+     div.header > div[class="information_panel"] > *{
+        margin: auto;
+        text-align: center;
+    }
+
+    div.header > div[class="information_panel"] > div.vertical{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}

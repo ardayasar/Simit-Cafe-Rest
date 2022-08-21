@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+*{
+    font-family: 'DM Sans', sans-serif;
+}
+
+html{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: url("../img/bg_blured.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* index.html */
+
+div.placeholder{
+    width: 80%;
+    max-width: 500px;
+    min-width: 250px;
+    height: 80%;
+    max-height: 500px;
+    min-height: 200px;
+    background-color: rgba(255,255,255,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 4px;
+    position: relative;
+}
+
+img.logo{
+    height: 220px;
+    width: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+a.menu > button{
+    width: 200px;
+    height: 45px;
+    font-size: 20px;
+    border: 2px solid #1972fa;
+    border-radius: 0px;
+    background-color: transparent;
+    color: #1972ff;
+    box-shadow: 0px 0px 10px 0.1px rgba(0, 0, 0, 0.166);
+    transition: background-color 0.2s, color 0.3s;
+    cursor: pointer;
+}
+
+a.menu > button:hover{
+    background-color: #1972fa;
+    color: white;
+    box-shadow: 0px 0px 10px 0.1px rgba(0, 0, 0, 0.366);
+}
+
+/*   --------------   */
+
+a.survey{
+    position: absolute;
+    bottom: 20px;
+    margin: auto;
+    width: 70%;
+    max-width: 400px;
+    text-align: center;
+    cursor: pointer;
+}
+
+a.survey > button{
+    padding: 5px 15px;
+    width: 100%;
+    border: 0px;
+    border-radius: 30px;
+    background-color: white;
+    cursor: pointer;
+}
+
+a.survey > button > h3{
+    font-size: 16px;
+    background: -webkit-linear-gradient(right, #2283C9, #00AFDF, #00D7DA, #77FAC6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
